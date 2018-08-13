@@ -357,8 +357,8 @@ namespace MonoGame.Framework
 
             if (Game.Window == this && Form.WindowState != FormWindowState.Minimized) {
                 // we may need to restore full screen when coming back from a minimized window
-                if (_lastFormState == FormWindowState.Minimized)
-                    _platform.Game.GraphicsDevice.SetHardwareFullscreen();
+                /*if (_lastFormState == FormWindowState.Minimized)
+                    _platform.Game.GraphicsDevice.SetHardwareFullscreen();*/
                 UpdateBackBufferSize();
             }
 
@@ -393,9 +393,9 @@ namespace MonoGame.Framework
                 return;
 
             var newSize = Form.ClientSize;
-            if (newSize.Width == manager.PreferredBackBufferWidth
+            /*if (newSize.Width == manager.PreferredBackBufferWidth
                 && newSize.Height == manager.PreferredBackBufferHeight)
-                return;
+                return;*/
 
             // Set the default new back buffer size
             manager.PreferredBackBufferWidth = newSize.Width;
